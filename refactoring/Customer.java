@@ -23,7 +23,7 @@ class Customer {
 
         for (Rental each : _rentals) {
             result.append("\t").append(each.get_movie().getTitle());
-            result.append("\t").append(each.getCharge());
+            result.append("\t").append(each.get_movie().getCharge(each.getDaysRented()));
             result.append("\n");
         }
 
@@ -38,14 +38,14 @@ class Customer {
     private double getTotalCharge() {
         double result = 0;
         for (Rental each : _rentals) {
-            result += each.getCharge();
+            result += each.get_movie().getCharge(each.getDaysRented());
         }
         return result;
     }
     private int getTotalFrequentRenterPoints() {
         int result = 0;
         for (Rental each : _rentals) {
-            result += each.getFrequentRenterPoints();
+            result += each.get_movie().getFrequentRenterPoints(each.getDaysRented());
         }
         return result;
     }
