@@ -15,12 +15,4 @@ class Rental {
     public Movie get_movie() {
         return _movie;
     }
-
-    public String getTitle() {
-        return _movie.getTitle();
-    }
-
-    public int getPriceCode() {
-        return _movie.getPriceCode();
-    }
 }
