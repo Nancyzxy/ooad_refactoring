@@ -1,3 +1,5 @@
+package refactoring;
+
 import java.util.Date;
 
 class Rental {

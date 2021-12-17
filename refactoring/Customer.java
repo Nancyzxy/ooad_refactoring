@@ -1,4 +1,5 @@
-import java.util.Enumeration;
+package refactoring;
+
 import java.util.Vector;
 
 class Customer {
@@ -20,7 +21,7 @@ class Customer {
     public String statement() {
         double totalAmount = 0;
         int frequentRenterPoints = 0;
-        StringBuilder result = new StringBuilder("Rental Record for " + getName() + "\n");
+        StringBuilder result = new StringBuilder("refactoring.Rental Record for " + getName() + "\n");
 
         for (Rental each : _rentals) {
             double thisAmount = 0;

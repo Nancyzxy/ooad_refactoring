@@ -1,3 +1,5 @@
+package refactoring;
+
 import org.junit.*;
 import static org.junit.Assert.*;
 import java.util.Date;
@@ -33,7 +35,7 @@ public class TestMovieRental {
         M3_PriceCode = Rental.CHILDRENS;
     }
     private String getAnswer1() {
-        StringBuilder ans = new StringBuilder("Rental Record for John\n");
+        StringBuilder ans = new StringBuilder("refactoring.Rental Record for John\n");
         ans.append("\tOz The Great and Powerful\t15.0\n");
         ans.append("\tThe Dark Knight\t3.5\n");
         ans.append("\tWreck-it Ralph\t3.0\n");
@@ -42,7 +44,7 @@ public class TestMovieRental {
         return ans.toString();
     }
     private String getAnswer2() {
-        StringBuilder ans = new StringBuilder("Rental Record for Mary\n");
+        StringBuilder ans = new StringBuilder("refactoring.Rental Record for Mary\n");
         ans.append("\tOz The Great and Powerful\t3.0\n");
         ans.append("\tWreck-it Ralph\t9.0\n");
         ans.append("Amount owed is 12.0\n");
@@ -50,7 +52,7 @@ public class TestMovieRental {
         return ans.toString();
     }
     private String getAnswer3() {
-        StringBuilder ans = new StringBuilder("Rental Record for Manny\n");
+        StringBuilder ans = new StringBuilder("refactoring.Rental Record for Manny\n");
         ans.append("\tThe Dark Knight\t2.0\n");
         ans.append("\tWreck-it Ralph\t1.5\n");
         ans.append("Amount owed is 3.5\n");
