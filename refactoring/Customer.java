@@ -24,18 +24,12 @@ class Customer {
         StringBuilder result = new StringBuilder("refactoring.Rental Record for " + getName() + "\n");
 
         for (Rental each : _rentals) {
-            // add frequent renter points
-            frequentRenterPoints ++;
-            // add bonus for a two day new release rental
-            if ((each.get_movie().getPriceCode() == Movie.NEW_RELEASE)
-                    && each.getDaysRented() > 1) frequentRenterPoints++;
-
-            //show figures for this rental
+            frequentRenterPoints += each.getFrequentRenterPoints();
             result.append("\t").append(each.get_movie().getTitle());
-            result.append("\t").append(String.valueOf( each.amountFor()));
+            result.append("\t").append(each.getCharge());
             result.append("\n");
 
-            totalAmount +=  each.amountFor();
+            totalAmount +=  each.getCharge();
         }
 
         //add footer lines
